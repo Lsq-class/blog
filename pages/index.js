@@ -8,7 +8,6 @@ import {
   FireOutlined,
 } from '@ant-design/icons';
 
-import styles from '../static/styles/components/index.module.css'
 import Author from '../component/Author'
 import Advert from '../component/Advert';
 import Footer from '../component/Footer';
@@ -40,15 +39,15 @@ const Home = () => {
             dataSource={mylist}
             renderItem={item => (
               <List.Item>
-                <div className={styles.listTitle}> {item.title}</div>
-                <div className={styles.listIcon}>
+                <div className='list-title'> {item.title}</div>
+                <div className='list-icon'>
                   <span> <FieldTimeOutlined />&nbsp;2021-9-6</span>
                   <span><FolderOutlined />&nbsp;视频教程</span>
                   <span><FireOutlined />&nbsp;2222人</span>
                 </div>
 
 
-                <div className={styles.listContext}> {item.context}</div>
+                <div className='list-context'> {item.context}</div>
               </List.Item>
             )}
 

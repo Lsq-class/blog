@@ -1,0 +1,17 @@
+.header {
+    background-color: #fff;
+    padding: 0.4rem;
+    overflow: hidden;
+    height: 3.3rem;
+    border-bottom: 1px solid #ccc;
+}
+.logo {
+    color: rgb(100, 124, 204);
+    font-size: 1.5rem;
+    margin-right: 0.2rem;
+}
+.txt {
+    color: rgb(143, 135, 135);
+    font-size: 0.5rem;
+    padding-left: 0.3rem;
+}

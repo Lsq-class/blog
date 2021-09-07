@@ -11,6 +11,7 @@ import {
 import styles from '../static/styles/components/index.module.css'
 import Author from '../component/Author'
 import Advert from '../component/Advert';
+import Footer from '../component/Footer';
 
 
 const Home = () => {
@@ -31,6 +32,8 @@ const Home = () => {
       <Header></Header>
       <Row className="comm-main" type='flex' justify='center'>
         <Col className='comm-left' xs={24} sm={24} md={16} lg={18} xl={14}>
+
+
           <List
             header={<div>最新日志</div>}
             itemLayout='vertical'
@@ -56,6 +59,7 @@ const Home = () => {
           <Advert />
         </Col>
       </Row>
+      <Footer />
     </div>
   )
 }

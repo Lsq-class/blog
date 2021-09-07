@@ -8,8 +8,9 @@ import {
   FireOutlined,
 } from '@ant-design/icons';
 
-import styles from '../static/styles/page/index.module.css'
+import styles from '../static/styles/components/index.module.css'
 import Author from '../component/Author'
+import Advert from '../component/Advert';
 
 
 const Home = () => {
@@ -52,6 +53,7 @@ const Home = () => {
         </Col>
         <Col className='comm-right' xs={0} sm={0} md={7} lg={5} xl={4}>
           <Author />
+          <Advert />
         </Col>
       </Row>
     </div>

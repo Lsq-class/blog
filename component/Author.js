@@ -1,12 +1,11 @@
 import {
-
     UserOutlined,
     GithubOutlined,
     QqOutlined,
     WeiboSquareOutlined
 } from '@ant-design/icons';
 import { Avatar, Divider } from 'antd'
-import styles from '../static/styles/page/Author.module.css'
+import styles from '../static/styles/components/Author.module.css'
 
 const Author = () => (
     <div className={styles.authorDiv + ' comm-box'}>

@@ -14,7 +14,10 @@ import Advert from '../component/Advert';
 import Footer from '../component/Footer';
 
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm'
+import remarkGfm from 'remark-gfm';
+import MarkNav from 'markdown-navbar';
+import 'markdown-navbar/dist/navbar.css'
+
 
 const Detailed = () => {
     let markdown = '# P01:课程介绍和环境搭建\n' +
@@ -56,7 +59,9 @@ const Detailed = () => {
         <div>
             <Head>
                 <title>Detailed</title>
+
             </Head>
+
             <Header></Header>
             <Row className="comm-main" type='flex' justify='center'>
                 <Col className='comm-left' xs={24} sm={24} md={16} lg={18} xl={14}>
@@ -89,9 +94,26 @@ const Detailed = () => {
                 <Col className='comm-right' xs={0} sm={0} md={7} lg={5} xl={4}>
                     <Author />
                     <Advert />
+                    <div className='comm-box'>
+                        <div className={styles.navTitle}>文件目录</div>
+                        <MarkNav
+                            className={styles.articleMenu}
+                            source={markdown}
+                            ordered={false}
+                        />
+                    </div>
                 </Col>
             </Row>
             <Footer />
+            <style jsx>
+                {
+                    `
+                       
+
+                        `
+                }
+            </style>
+
         </div>
     )
 }

@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+React.useLayoutEffect = React.useEffect
+
 import Head from 'next/head'
 import Header from '../component/Header'
 import { Row, Col, List } from 'antd'

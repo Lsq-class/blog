@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Header from '../component/Header'
-import { Row, Col, Breadcrumb } from 'antd'
+import { Row, Col, Breadcrumb, Affix } from 'antd'
 import {
     CalendarOutlined,
     FolderOutlined,
@@ -96,14 +96,16 @@ const Detailed = () => {
                 <Col className='comm-right' xs={0} sm={0} md={7} lg={5} xl={4}>
                     <Author />
                     <Advert />
-                    <div className='comm-box'>
-                        <div className={styles.navTitle}>文件目录</div>
-                        <MarkNav
-                            className={styles.articleMenu}
-                            source={markdown}
-                            ordered={false}
-                        />
-                    </div>
+                    <Affix offsetTop={5}>
+                        <div className='comm-box'>
+                            <div className={styles.navTitle}>文件目录</div>
+                            <MarkNav
+                                className={styles.articleMenu}
+                                source={markdown}
+                                ordered={false}
+                            />
+                        </div>
+                    </Affix>
                 </Col>
             </Row>
             <Footer />

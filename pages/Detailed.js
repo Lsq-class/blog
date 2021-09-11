@@ -18,6 +18,8 @@ import remarkGfm from 'remark-gfm';
 import MarkNav from 'markdown-navbar';
 import 'markdown-navbar/dist/navbar.css'
 
+import axios from 'axios'
+
 
 const Detailed = () => {
     let markdown = '# P01:课程介绍和环境搭建\n' +
@@ -105,16 +107,24 @@ const Detailed = () => {
                 </Col>
             </Row>
             <Footer />
-            <style jsx>
-                {
-                    `
-                       
-
-                        `
-                }
-            </style>
 
         </div>
     )
+}
+
+Detailed.getInitialProps = async (context) => {
+    console.log(context.query.id)
+
+    let id = context.query.id
+
+    const promise = new Promise((resolve) => {
+        axios('http://127.0.0.1:7001/default/getArticleById/' + id).then(
+            (res) => {
+                console.log(res.data)
+                resolve(res.data[0])
+            }
+        )
+    })
+    return await promise
 }
 export default Detailed

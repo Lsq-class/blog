@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 React.useLayoutEffect = React.useEffect
 
+import Link from 'next/link'
 import axios from 'axios'
 import Head from 'next/head'
 import Header from '../component/Header'
@@ -18,6 +19,7 @@ import Footer from '../component/Footer';
 
 
 const Home = (list) => {
+  //
   const list1 = []
   for (const key in list) {
     if (Object.hasOwnProperty.call(list, key)) {
@@ -46,11 +48,17 @@ const Home = (list) => {
             dataSource={mylist}
             renderItem={item => (
               <List.Item>
-                <div className='list-title'> {item.title}</div>
+                <div className='list-title'>
+                  <Link href={{ pathname: '/Detailed', query: { id: item.id } }}>
+                    <a>{item.title}</a>
+                  </Link>
+
+
+                </div>
                 <div className='list-icon'>
-                  <span> <FieldTimeOutlined />&nbsp;{item.addTime}</span>
-                  <span><FolderOutlined />&nbsp;{item.typeName}</span>
-                  <span><FireOutlined />&nbsp;{item.view_count}</span>
+                  <span> <FieldTimeOutlined />{item.addTime}</span>
+                  <span><FolderOutlined />{item.typeName}</span>
+                  <span><FireOutlined />{item.view_count}</span>
                 </div>
 
 

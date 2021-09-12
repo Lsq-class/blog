@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "toc": "tocify docs > README.md"
   },
   "dependencies": {
     "@ant-design/icons": "^4.6.4",
@@ -14,12 +15,15 @@
     "antd": "^4.16.13",
     "axios": "^0.21.4",
     "babel-plugin-import": "^1.13.3",
+    "highlight.js": "^11.2.0",
+    "lodash": "^4.17.21",
     "markdown-navbar": "^1.4.3",
+    "marked": "^3.0.3",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-markdown": "^7.0.1",
-    "remark-gfm": "^2.0.0"
+    "remark-gfm": "^2.0.0",
+    "tocify": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "7.32.0",

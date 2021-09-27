@@ -67,8 +67,8 @@ const Detailed = (props) => {
                     <div className={styles.breadDiv}>
                         <Breadcrumb>
                             <Breadcrumb.Item><a href='/'>首页</a></Breadcrumb.Item>
-                            <Breadcrumb.Item>视频列表</Breadcrumb.Item>
-                            <Breadcrumb.Item>xxxx</Breadcrumb.Item>
+                            <Breadcrumb.Item><a href={'./List?id=' + props.typeId}>{props.typeName}</a></Breadcrumb.Item>
+                            <Breadcrumb.Item>{props.title}</Breadcrumb.Item>
                         </Breadcrumb>
                     </div>
                     <div>
@@ -76,9 +76,9 @@ const Detailed = (props) => {
                             React项目实战开发
                         </div>
                         <div className={styles.center + ' list-icon'}>
-                            <span><CalendarOutlined />2021/9/7</span>
-                            <span><FolderOutlined />&nbsp;视频教程</span>
-                            <span><FireOutlined />&nbsp;2222人</span>
+                            <span><CalendarOutlined />{props.addTime}</span>
+                            <span><FolderOutlined />&nbsp;{props.typeName}</span>
+                            <span><FireOutlined />&nbsp;{props.view_count}人</span>
                         </div>
                         <div className={styles.detailedContent}
                             dangerouslySetInnerHTML={{ __html: html }}

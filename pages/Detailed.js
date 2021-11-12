@@ -29,6 +29,8 @@ import axios from 'axios'
 
 import servicePath from '../config/apiUrl';
 
+import Link from 'next/link';
+
 
 
 const Detailed = (props) => {
@@ -66,7 +68,7 @@ const Detailed = (props) => {
                 <Col className='comm-left' xs={24} sm={24} md={16} lg={18} xl={14}>
                     <div className={styles.breadDiv}>
                         <Breadcrumb>
-                            <Breadcrumb.Item><a href='/'>首页</a></Breadcrumb.Item>
+                            <Breadcrumb.Item><Link href='/'>首页</Link></Breadcrumb.Item>
                             <Breadcrumb.Item><a href={'./List?id=' + props.typeId}>{props.typeName}</a></Breadcrumb.Item>
                             <Breadcrumb.Item>{props.title}</Breadcrumb.Item>
                         </Breadcrumb>

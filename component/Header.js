@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, lazy, Suspense } from 'react'
 import styles from '../static/styles/components/Header.module.css'
 import { Row, Col, Menu } from 'antd'
 import { createFromIconfontCN } from '@ant-design/icons'
@@ -40,8 +40,8 @@ const Header = () => {
         <div className={styles.header}>
             <Row type='flex' justify='center'>
                 <Col xs={24} sm={24} md={10} lg={10} xl={10}>
-                    <span className={styles.logo}>技术胖</span>
-                    <span className={styles.txt}>专注前端开发，每年1000集免费视频</span>
+                    <span className={styles.logo}>学习园地</span>
+                    <span className={styles.txt}>专注前端开发，开心脱发50年</span>
                 </Col>
                 <Col xs={0} sm={0} md={14} lg={8} xl={8}>
                     <Menu mode='horizontal' onClick={handleClick} className='nn'>
@@ -59,8 +59,6 @@ const Header = () => {
                                 )
                             })
                         }
-
-
                     </Menu>
                 </Col>
             </Row>

@@ -17,7 +17,7 @@ import axios from 'axios';
 import servicePath from '../config/apiUrl';
 import Link from 'next/link';
 
-const myList = (list) => {
+const MyList = (list) => {
 
     const [mylist, setMylist] = useState(
         list.data
@@ -38,7 +38,7 @@ const myList = (list) => {
                 <Col className='comm-left' xs={24} sm={24} md={16} lg={18} xl={14}>
                     <div className='bread'>
                         <Breadcrumb>
-                            <Breadcrumb.Item><a href='/'>首页</a></Breadcrumb.Item>
+                            <Breadcrumb.Item><Link href='/'>首页</Link></Breadcrumb.Item>
                             <Breadcrumb.Item>{mylist[0].typeName}</Breadcrumb.Item>
                         </Breadcrumb>
                     </div>
@@ -76,7 +76,7 @@ const myList = (list) => {
     )
 }
 
-myList.getInitialProps = async (context) => {
+MyList.getInitialProps = async (context) => {
     let id = context.query.id
     const promise = new Promise((resolve) => {
         axios(servicePath.getListById + id).then(
@@ -89,4 +89,4 @@ myList.getInitialProps = async (context) => {
     return await promise
 }
 
-export default myList
+export default MyList
